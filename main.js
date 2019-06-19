@@ -2,7 +2,6 @@
 fetch("https://teclead.de/recruiting/radios")
   .then(response => response.json())
   .then((data) => {
-    console.log(data);
     const dataRefactored = data.radios;
     console.log(dataRefactored);
 
