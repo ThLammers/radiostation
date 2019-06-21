@@ -1,4 +1,3 @@
-
 fetch("https://teclead.de/recruiting/radios")
   .then(response => response.json())
   .then((data) => {
@@ -20,17 +19,15 @@ fetch("https://teclead.de/recruiting/radios")
           </div>
         </ol>
         `);
-
-
     });
-})
+  })
+
   .then(() => {
     //getting all the radio stations from DOM
     const radios = document.querySelectorAll(".radio");
       radios.forEach((radio) => {
         //created a click listener on every radio object
         radio.addEventListener('click', (event) => {
-
           //selected the right detailed class
           const footer = document.querySelector('.footer');
           footer.innerText = event.path[1].children[0].innerText
@@ -43,4 +40,5 @@ fetch("https://teclead.de/recruiting/radios")
         });
       });
   });
+
 
